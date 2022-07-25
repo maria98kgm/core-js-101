@@ -49,7 +49,7 @@ function getFizzBuzz(num) {
 function getFactorial(n) {
   if (n === 0) return 1;
   let factorial = 1;
-  for (let i = 1; i <= n; i += 1) {
+  for (let i = 1; Number(i) <= Number(n); i += 1) {
     factorial *= i;
   }
   return factorial;
@@ -70,7 +70,7 @@ function getFactorial(n) {
  */
 function getSumBetweenNumbers(n1, n2) {
   let num = 0;
-  for (let i = n1; i <= n2; i += 1) {
+  for (let i = n1; Number(i) <= Number(n2); i += 1) {
     num += i;
   }
   return num;
