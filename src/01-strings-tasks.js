@@ -239,7 +239,6 @@ function encodeToRot13(str) {
     else final += alphabet[letterIndex + 13];
   }
   return final;
-  // throw new Error('Not implemented');
 }
 
 /**
