@@ -227,18 +227,19 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let final = '';
-  for (let i = 0; i < str.length; i += 1) {
-    const letterIndex = alphabet.indexOf(str[i]);
-    if (letterIndex === -1) final += str[i];
-    else if (letterIndex <= 25) {
-      if (letterIndex >= 13) final += alphabet[(letterIndex + 13) - 26];
-      else final += alphabet[letterIndex + 13];
-    } else if (letterIndex >= 39) final += alphabet[(letterIndex + 13) - 26];
-    else final += alphabet[letterIndex + 13];
-  }
-  return final;
+  // const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  // let final = '';
+  // for (let i = 0; i < str.length; i += 1) {
+  //   const letterIndex = alphabet.indexOf(str[i]);
+  //   if (letterIndex === -1) final += str[i];
+  //   else if (letterIndex <= 25) {
+  //     if (letterIndex >= 13) final += alphabet[(letterIndex + 13) - 26];
+  //     else final += alphabet[letterIndex + 13];
+  //   } else if (letterIndex >= 39) final += alphabet[(letterIndex + 13) - 26];
+  //   else final += alphabet[letterIndex + 13];
+  // }
+  // return final;
+  throw new Error('Not implemented');
 }
 
 /**
