@@ -229,10 +229,10 @@ function getRectangleString(width, height) {
 function encodeToRot13(str) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let final = '';
-  for (let i = 0; i < str.length; i += 1) {
+  for (let i = 0; Number(i) < Number(str.length); i += 1) {
     const letterIndex = alphabet.indexOf(str[i]);
     if (letterIndex === -1) final += str[i];
-    else if (Number(letterIndex) <= 25) {
+    else if (Number(letterIndex) <= Number(25)) {
       if (letterIndex >= 13) final += alphabet[(letterIndex + 13) - 26];
       else final += alphabet[letterIndex + 13];
     } else if (letterIndex >= 39) final += alphabet[(letterIndex + 13) - 26];
