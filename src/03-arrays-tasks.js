@@ -344,10 +344,12 @@ const digitNames = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eigh
 
 function sortDigitNamesByNumericOrder(arr) {
   return arr.sort((a, b) => {
-    if (digitNames.indexOf(a) < digitNames.indexOf(b)) {
+    const first = digitNames.indexOf(a);
+    const second = digitNames.indexOf(b);
+    if (first < second) {
       return -1;
     }
-    if (digitNames.indexOf(a) > digitNames.indexOf(b)) {
+    if (first > second) {
       return 1;
     }
     return 0;
